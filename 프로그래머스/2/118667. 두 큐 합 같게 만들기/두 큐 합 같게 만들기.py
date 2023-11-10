@@ -15,15 +15,14 @@ def solution(queue1, queue2):
             item = q2.popleft()
             q1.append(item)
             q1_sum += item
-            answer += 1
         else:
             item = q1.popleft()
             q1_sum -= item
-            answer += 1
             
         if not q2:
-            answer = -1
-            break
+            return -1
+        
+        answer += 1
     
     return answer
     
